@@ -37,14 +37,9 @@ func defineRoutes() {
   let pushNotificationsClient =
   PushNotifications(bluemixRegion: PushNotifications.Region.US_SOUTH, bluemixAppGuid: mobileClientAccessProps.clientId, bluemixAppSecret: ibmPushProps.secret)
     
-    // Facebook credentials
-    let credentials2 = Credentials()
-    let fbClientId = "1545401759089721"  // app ID
-    let fbClientSecret = "6b768375846e5aa3e50ac8c9fd875c24"  // app secret
-    let serverUrl = "http://localhost:1024"  // as configued on facebook?
-    
-    let fbCredentials = CredentialsFacebook(clientId: fbClientId, clientSecret: fbClientSecret, callbackUrl: serverUrl + "/login/facebook/callback")
-    credentials2.register(fbCredentials)
+  // Facebook credentials
+  let fbCredentials = CredentialsFacebookToken()
+  credentials.register(plugin: fbCredentials)
 
   // Assign middleware instance (to securing endpoints)
   router.get("/users", middleware: credentials)
@@ -52,13 +47,6 @@ func defineRoutes() {
   router.post("/push", middleware: credentials)
   router.get("/ping", middleware: credentials)
   router.post("/images",  middleware: credentials)
-
-    router.get("/users", middleware: credentials2)
-    router.post("/users", middleware: credentials2)
-    router.post("/push", middleware: credentials2)
-    router.get("/ping", middleware: credentials2)
-    router.post("/images",  middleware: credentials2)
-
     
   // Ping closure
   let closure = { (request: RouterRequest, response: RouterResponse, next: () -> Void) -> Void in
