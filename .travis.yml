@@ -1,9 +1,12 @@
+language: objective-c
 
 branches:
   only:
     - master
     - develop
     - add-travis
+
+podfile: BluePic-iOS/Podfile
 
 matrix:
   include:
@@ -27,9 +30,6 @@ before_install:
   # - cd BluePic-Server
 
 script:
-  - cd BluePic-Server 
-  - ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-Server
-  - cd ..
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd BluePic-iOS; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-iOS; fi
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ..; fi
+  - cd BluePic-Server; ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-Server
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ../BluePic-iOS; xcodebuild clean build test -project BluePic.xcodeproj -scheme BluePic; fi
+ 
