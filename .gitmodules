@@ -1,3 +1,6 @@
 [submodule "BluePic-Server/Package-Builder"]
 	path = BluePic-Server/Package-Builder
 	url = https://github.com/IBM-Swift/Package-Builder.git
+[submodule "BluePic-iOS/Package-Builder"]
+	path = BluePic-iOS/Package-Builder
+	url = https://github.com/IBM-Swift/Package-Builder.git
