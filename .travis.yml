@@ -30,9 +30,6 @@ script:
   - cd BluePic-Server 
   - ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-Server
   - cd ..
-  - if [[ "$TRAVIS_OS_NAME" == "osx" ]];
-    then 
-      cd BluePic-iOS;
-      ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-iOS;
-      cd ..;
-    fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd BluePic-iOS; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then ./Package-Builder/build-package.sh $TRAVIS_BRANCH $TRAVIS_BUILD_DIR/BluePic-iOS; fi
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then cd ..; fi
