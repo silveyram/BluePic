@@ -19,8 +19,9 @@ matrix:
 before_install:
   - git submodule update --init --remote --merge --recursive
   - git clone -b master https://$GITHUB_USER:$GITHUB_PWD@github.com/IBM-Swift/BluePic-Testing-Credentials.git BluePic-Server/BluePic-Testing-Credentials
+  - cp -RP $TRAVIS_BUILD_DIR/BluePic-Testing-Credentials/development/* $TRAVIS_BUILD_DIR
   - cd Cloud-Scripts
-  - ./../BluePic-Server/BluePic-Testing-Credentials/development/Cloud-Scripts/populator.sh
+  - ./populator.sh
   - cd ..
   - cd BluePic-Server
   - cd Package-Builder
