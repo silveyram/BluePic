@@ -14,9 +14,9 @@ matrix:
       sudo: required
     - os: osx
       osx_image: xcode8
-      podfile: BluePic-iOS/Podfile
-      xcode_project: BluePic-iOS/BluePic.xcodeproj
-      xcode_scheme: BluePic
+      #podfile: BluePic-iOS/Podfile
+      #xcode_project: BluePic-iOS/BluePic.xcodeproj
+      #xcode_scheme: BluePic
 
 before_install:
   - git submodule update --init --remote --merge --recursive
