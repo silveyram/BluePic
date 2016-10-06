@@ -25,8 +25,8 @@ before_install:
   - git checkout parameterize
   - cd ..
   - git clone -b master https://$GITHUB_USER:$GITHUB_PWD@github.com/IBM-Swift/BluePic-Testing-Credentials.git
-  - cd Cloud-Scripts
-  - ./../BluePic-Testing-Credentials/development/Cloud-Scripts/populator.sh
+  - cd ../Cloud-Scripts
+  - ./../BluePic-Server/BluePic-Testing-Credentials/development/Cloud-Scripts/populator.sh
   - cd ..
 
 script:
