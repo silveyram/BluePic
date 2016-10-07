@@ -22,7 +22,7 @@ before_install:
   - cp -RP $TRAVIS_BUILD_DIR/BluePic-Testing-Credentials/development/* $TRAVIS_BUILD_DIR
   - cd BluePic-Server
   - cd Package-Builder
-  - git checkout parameterize
+  - git checkout sample
   - cd ..
  
 script:
