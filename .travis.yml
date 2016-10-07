@@ -16,6 +16,7 @@ matrix:
 before_install:
   - git submodule update --init --remote --merge --recursive
   - git clone -b master https://$GITHUB_USER:$GITHUB_PWD@github.com/IBM-Swift/BluePic-Testing-Credentials.git
+  - cp -rP BluePic-Testing-Credentials/BluePic/* .
   - cd BluePic-Server
    
 script:
