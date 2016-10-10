@@ -36,11 +36,11 @@
           "label": "AdvancedMobileAccess",
           "plan": "Gold",
           "credentials": {
-            "serverUrl": "<serverUrl>",
-            "clientId": "<clientId>",
-            "secret": "<secret>",
-            "tenantId": "<tenantId>",
-            "admin_url": "<admin_url>"
+            "serverUrl": "https://imf-authserver.ng.bluemix.net/imf-authserver",
+            "clientId": "e0a0d690-fd22-479a-b15c-5883dbbe70a6",
+            "secret": "ODI1ZWY0ZjYtOTZiZC00Nzc4LWExMGItNDdjZGIxOTEwOGU0",
+            "tenantId": "e0a0d690-fd22-479a-b15c-5883dbbe70a6",
+            "admin_url": "https://mobile.ng.bluemix.net/imfmobileplatformdashboard/"
           }
         }
       ],
@@ -51,8 +51,8 @@
           "plan": "Basic",
           "credentials": {
             "url": "<url>",
-            "admin_url": "<admin_url>",
-            "appSecret": "<appSecret>"
+            "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=27e6e322-438a-47d4-87bc-0a775e9a895e",
+            "appSecret": "d6378191-1ba3-4d15-b015-bbcbbb465935"
           }
         }
       ],
@@ -62,11 +62,11 @@
           "label": "cloudantNoSQLDB",
           "plan": "Shared",
           "credentials": {
-            "username": "<username>",
-            "password": "<password>",
-            "host": "<host>",
+            "username": "c51e3e65-0cd1-4fee-a8f0-36615254752f-bluemix",
+            "password": "f2b55f9d55ffefb5ada0714daa2b1dca6ea28b803ab62068c94a13c3513314c7",
+            "host": "c51e3e65-0cd1-4fee-a8f0-36615254752f-bluemix.cloudant.com",
             "port": 443,
-            "url": "<url>"
+            "url": "https://c51e3e65-0cd1-4fee-a8f0-36615254752f-bluemix:f2b55f9d55ffefb5ada0714daa2b1dca6ea28b803ab62068c94a13c3513314c7@c51e3e65-0cd1-4fee-a8f0-36615254752f-bluemix.cloudant.com"
           }
         }
       ],
@@ -77,14 +77,14 @@
           "plan": "standard",
           "credentials": {
             "auth_url": "https://identity.open.softlayer.com",
-            "project": "<project>",
-            "projectId": "<projectId>",
-            "region": "<region>",
-            "userId": "<userId>",
-            "username": "<username>",
-            "password": "<password>",
-            "domainId": "<domainId>",
-            "domainName": "<domainName>"
+            "project": "object_storage_f3761507_3606_45e8_aa3e_dc2ac98265fd",
+            "projectId": "8296422137ca4b6aaf45c0de64f8bd8e",
+            "region": "dallas",
+            "userId": "1d67ce265b094efc853ebe2e6d8709ce",
+            "username": "admin_e57d5975cd2fd45fa61b6c063e15111d9eec9614",
+            "password": "o7B*ZP=e.y#=Z3[R",
+            "domainId": "205184c206574c88a5e2d7aad3b7dd66",
+            "domainName": "1139393"
           }
         }
       ]
