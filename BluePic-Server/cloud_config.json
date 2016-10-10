@@ -50,7 +50,7 @@
           "label": "imfpush",
           "plan": "Basic",
           "credentials": {
-            "url": "<url>",
+            "url": "http://imfpush.ng.bluemix.net/imfpush/v1/apps/27e6e322-438a-47d4-87bc-0a775e9a895e",
             "admin_url": "//mobile.ng.bluemix.net/imfpushdashboard/?appGuid=27e6e322-438a-47d4-87bc-0a775e9a895e",
             "appSecret": "d6378191-1ba3-4d15-b015-bbcbbb465935"
           }
